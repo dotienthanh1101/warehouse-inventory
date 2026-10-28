@@ -1,0 +1,2 @@
+# Excel report writer for the installed Python backend; CSV uses Python stdlib.
+openpyxl==3.1.5

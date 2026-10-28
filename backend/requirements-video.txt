@@ -1,0 +1,2 @@
+websockets>=15,<17
+imageio-ffmpeg>=0.6,<0.7

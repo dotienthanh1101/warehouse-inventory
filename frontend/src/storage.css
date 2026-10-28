@@ -1,0 +1,12 @@
+.storage-summary,.storage-admin{background:#f1f6ff;border:1px solid #cbdcf7;border-radius:12px;padding:14px;color:#183659;min-width:0}
+.storage-summary{margin:0 0 12px;font-size:12px}
+.storage-admin{margin:18px 0;max-width:720px}
+.storage-heading{display:flex;align-items:center;justify-content:space-between;gap:8px;flex-wrap:wrap}
+.storage-state{font-size:11px;border-radius:20px;padding:3px 8px;background:#dbeaff;color:#214e8c}
+.storage-state.warning{background:#fff0ce;color:#785000}.storage-state.full{background:#ffe3e3;color:#9b2424}
+.storage-value{font-size:15px;font-weight:700;margin:8px 0}.storage-value span{font-weight:400;color:#48627f}
+.storage-summary progress,.storage-admin progress{display:block;width:100%;height:8px;accent-color:#3174cd}
+.storage-warning{color:#8b3b12;font-size:12px;line-height:1.6;margin:8px 0 0}
+.storage-form{display:flex;align-items:end;gap:10px;flex-wrap:wrap;margin-top:14px}
+.storage-form label{display:grid;gap:6px;max-width:180px}.storage-form input{width:100%;min-width:100px;padding:10px;border:1px solid #b8cce7;border-radius:8px;background:#fff;color:#163b65}
+@media(prefers-reduced-motion:reduce){.storage-summary progress,.storage-admin progress{transition:none}}

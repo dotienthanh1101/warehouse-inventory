@@ -1,0 +1,7 @@
+# Chỉ cần nếu chạy cầu nối trên máy khác chưa có môi trường Python của dự án.
+opencv-python>=4.10,<6
+numpy>=2,<3
+truststore>=0.10,<1
+
+websockets>=15,<17
+imageio-ffmpeg>=0.6,<0.7

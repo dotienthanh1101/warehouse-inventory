@@ -1,0 +1,683 @@
+{
+  "format": "warehouse-github-source-export-v1",
+  "created_at": "2026-10-28T10:42:14.219695+00:00",
+  "source_modified": false,
+  "network_used": false,
+  "database_or_capture_contents_read": false,
+  "secret_scan": "common_patterns_only_not_a_guarantee",
+  "issues": [],
+  "excluded_counts": {
+    "non_source_root": 5,
+    "runtime_archive_dependency_directory": 10,
+    "non_source_or_private_file": 69
+  },
+  "excluded_top_level_directories": [
+    ".venv",
+    "__pycache__",
+    "archive",
+    "captures",
+    "data"
+  ],
+  "files": [
+    {
+      "path": ".gitignore",
+      "bytes": 192,
+      "sha256": "41fdcb00997b815eca6ff5754dd1b2d06d578eb995c82870a3a9407526af236c"
+    },
+    {
+      "path": "backend/__init__.py",
+      "bytes": 1,
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+    },
+    {
+      "path": "backend/app/__init__.py",
+      "bytes": 1,
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+    },
+    {
+      "path": "backend/app/account_gate.py",
+      "bytes": 746,
+      "sha256": "19f6098794171b2ed864ee77279c1f3c9716a1cd3bf6f2d0e11f98aaa2c908f9"
+    },
+    {
+      "path": "backend/app/admin_warehouse_api.py",
+      "bytes": 13789,
+      "sha256": "2919d3364ba4ecb554baaae9bcca4156a30cebf5696cfeecce089ff12f1234d4"
+    },
+    {
+      "path": "backend/app/aruco_reader.py",
+      "bytes": 6032,
+      "sha256": "2506b73ba9761cfa72deb32757a3bde27870b33eda66d059ed30265b3cc441ef"
+    },
+    {
+      "path": "backend/app/auth_api.py",
+      "bytes": 10915,
+      "sha256": "a049918fd5da98e9f6571d728eb1db52bce94126ae5c619b65b1a14b0f2f663a"
+    },
+    {
+      "path": "backend/app/auth_middleware.py",
+      "bytes": 5787,
+      "sha256": "5b60ae74458c95cec842b5803f8e011554d5f6c91a2db09453d4ffa61036508f"
+    },
+    {
+      "path": "backend/app/auth_settings.py",
+      "bytes": 3378,
+      "sha256": "3e5088db309e60538bdda931c632723e77dd8adbcbc8768c2645cc32b0e4f306"
+    },
+    {
+      "path": "backend/app/auth_store.py",
+      "bytes": 22266,
+      "sha256": "1028245a7cb6bd1ab088a8b959fafc4d4f5c874601c105a14f8384985b07ef38"
+    },
+    {
+      "path": "backend/app/box_analysis.py",
+      "bytes": 8163,
+      "sha256": "5d51f8fcf849950f2ab0b31183a72eb74e7a0934351ae9fa461bf45810e94ae5"
+    },
+    {
+      "path": "backend/app/box_inventory_service.py",
+      "bytes": 17115,
+      "sha256": "3375ee9b15f43bf0bc97486eb79b38bfcb79a53840ffffc65b05ad32f3c95b61"
+    },
+    {
+      "path": "backend/app/camera_gateway.py",
+      "bytes": 10189,
+      "sha256": "cde35e054bffbc3163588e7e12aba36bf4e7271949e2719344955c35b90073b1"
+    },
+    {
+      "path": "backend/app/camera_gateway_api.py",
+      "bytes": 4272,
+      "sha256": "dc2b0a71921d94e1548f16c998f725f34b303f8c66509d3a552d42c4a43c9629"
+    },
+    {
+      "path": "backend/app/camera_video.py",
+      "bytes": 10164,
+      "sha256": "8e79578150d8d80cbb657d0a86f63591530e3f9db126b44f4c4f2eaac33acc31"
+    },
+    {
+      "path": "backend/app/catalog_api.py",
+      "bytes": 3170,
+      "sha256": "82757c5b7955ee13e4709dc0d1b08f2cfbc1ba0d1dde1ee3ac439e838c31076d"
+    },
+    {
+      "path": "backend/app/catalog_service.py",
+      "bytes": 6303,
+      "sha256": "43eede7745635d943dc7e9be544df4c3af4e526c89057760b12f3d03a35400e5"
+    },
+    {
+      "path": "backend/app/daily_api.py",
+      "bytes": 8493,
+      "sha256": "581c7be4de421492289032a6a6e46e1556b02d400d5d776ada0304245cebff5b"
+    },
+    {
+      "path": "backend/app/daily_inventory_service.py",
+      "bytes": 8725,
+      "sha256": "bb6a00f33a82632ab33b83e3c1dab74887523d293efdfa1123b9ea45c5e847d4"
+    },
+    {
+      "path": "backend/app/daily_reconciliation_service.py",
+      "bytes": 9096,
+      "sha256": "7c9158ba40729a18789f9db1ca73d0602cbcb545ff11e8b1b5754f7d8af3438a"
+    },
+    {
+      "path": "backend/app/daily_session_service.py",
+      "bytes": 6100,
+      "sha256": "f98faf05916038220a048b4c01b13c56e1b6d1e0bd841e11bcf316c527083200"
+    },
+    {
+      "path": "backend/app/database.py",
+      "bytes": 28157,
+      "sha256": "35b09e624eddad3306277bf6accdef58c6735af4e6ec7095f6fc5eff73f2e7f5"
+    },
+    {
+      "path": "backend/app/day_closing_service.py",
+      "bytes": 9816,
+      "sha256": "fdd0d8c2555d67d6775ffaf77bbc42660ad75237e435327e7ea24d33c6632b4e"
+    },
+    {
+      "path": "backend/app/duplicate_check.py",
+      "bytes": 12623,
+      "sha256": "5eb921d4ea4e22f4a7ef1782434c92c35d7f17adbcc12d22f46ff2f90f4353f2"
+    },
+    {
+      "path": "backend/app/duplicate_repository.py",
+      "bytes": 7880,
+      "sha256": "b094085f2ac05ad07181cee8229a56fba3a778dc8b13b8d35632ae2570cab327"
+    },
+    {
+      "path": "backend/app/image_task_api.py",
+      "bytes": 5467,
+      "sha256": "6d8eff5dc84c5304d8e43b90e67a7fb624745ab8abba7b1433ec669ab6f3735d"
+    },
+    {
+      "path": "backend/app/image_tasks.py",
+      "bytes": 13136,
+      "sha256": "c24011bc74388f2a8c6a1a9c669c1a3e0a608c8b1e8d048cf1fb035e1f111725"
+    },
+    {
+      "path": "backend/app/inventory_service.py",
+      "bytes": 11144,
+      "sha256": "64a5f314c32ee076947d5e73a51332811c444079151fa7c8741ced85fc46ab96"
+    },
+    {
+      "path": "backend/app/main.py",
+      "bytes": 33087,
+      "sha256": "b3ecc035fe21509057b10d48637347b66feabe386bfdeaa2d2d6d0c82bb0ace9"
+    },
+    {
+      "path": "backend/app/recovery_email.py",
+      "bytes": 2796,
+      "sha256": "b62e7e480aaf146d29de1edfe2023ffdc364b87344326a76b4227d8afc2ddb59"
+    },
+    {
+      "path": "backend/app/report_export_api.py",
+      "bytes": 2533,
+      "sha256": "f297f51042f7e7ce82b701fbdfcc84096b68bbf7ef84647471f371bf72970f39"
+    },
+    {
+      "path": "backend/app/report_export_service.py",
+      "bytes": 8890,
+      "sha256": "ae567bcd3cce5d87b8eb0519b079cdcbcf70bbbea10649ec7c07c0b2adb102b2"
+    },
+    {
+      "path": "backend/app/review_api.py",
+      "bytes": 19170,
+      "sha256": "d0560e3d3df1c502303437119d070b50633b204f8328aa4b5c97a6e40ddcba39"
+    },
+    {
+      "path": "backend/app/server_capacity.py",
+      "bytes": 4691,
+      "sha256": "3ef462b0263bf9472fc25a899251e97fa5eed118b13ba4fa121bf792fc155b65"
+    },
+    {
+      "path": "backend/app/session_finalize_service.py",
+      "bytes": 10054,
+      "sha256": "b64982f0983995f8837df24d0298087e2f2c69a85ce9acd050c28e1ed2402474"
+    },
+    {
+      "path": "backend/app/storage_api.py",
+      "bytes": 2220,
+      "sha256": "e1fa0ef327c80f9aa525d6ab5c683f15eb857282ce7f0ac62646786c432a8c69"
+    },
+    {
+      "path": "backend/app/storage_quota.py",
+      "bytes": 8279,
+      "sha256": "a1ae5de3cbeb5e21d1909c9852c7f5aef4566075799fa5034ef133c9384e0969"
+    },
+    {
+      "path": "backend/app/support_api.py",
+      "bytes": 6215,
+      "sha256": "8f0ce3b941eb7d17cca15c19e2db50a5eeb10a81af908bfc9b630e980262dc45"
+    },
+    {
+      "path": "backend/app/support_service.py",
+      "bytes": 12876,
+      "sha256": "0fecccc8b3c83553cfd73572913065382dbe625e65edae3748fd35c9c0471d69"
+    },
+    {
+      "path": "backend/app/visual_similarity.py",
+      "bytes": 16981,
+      "sha256": "817ea3b6702870e8db5c65be8c884dd9ba44fe57385f651adc65f6df514cd08c"
+    },
+    {
+      "path": "backend/app/warehouse_camera.py",
+      "bytes": 7220,
+      "sha256": "666c4d621ad5fd21ab94a7e91ddf9a384708143540e4c0bf8dad95c3077885dc"
+    },
+    {
+      "path": "backend/app/warehouse_scope.py",
+      "bytes": 1707,
+      "sha256": "bcb2d9cbc56607f9d026d2fbfac2844f7bfa3827e1076b3b41603339d79d4bbd"
+    },
+    {
+      "path": "backend/requirements-auth.txt",
+      "bytes": 51,
+      "sha256": "74b78688ce29462bd9475f0cab00088782107a9dc9a001c338f1ff6dadcb365c"
+    },
+    {
+      "path": "backend/requirements-backup.txt",
+      "bytes": 21,
+      "sha256": "6b57b335e78f30c5d54e6e4965f1e6ad63c29a8385dc64f4ec7f955982c07b65"
+    },
+    {
+      "path": "backend/requirements-report.txt",
+      "bytes": 96,
+      "sha256": "fcc6fecd017e374ee083ccdcc1d7f4201b781a1b0b21320339cd179fce1e6cbe"
+    },
+    {
+      "path": "backend/requirements-video.txt",
+      "bytes": 44,
+      "sha256": "be17cda4d52228a0ebc2d94990494dc6ca85bd4be9156ea6e087329dfab5a2fe"
+    },
+    {
+      "path": "backend/requirements.txt",
+      "bytes": 33,
+      "sha256": "14e1fe6d417064988dcecaa2dcbfcf2d943f95042bfdf10fcd6d5da96f85e909"
+    },
+    {
+      "path": "camera_bridge/README_VI.md",
+      "bytes": 3273,
+      "sha256": "a07ab025d4c02bc84d4b293380c291e8830ec8c5d6e0d7b0932485578e3e2f2b"
+    },
+    {
+      "path": "camera_bridge/requirements.txt",
+      "bytes": 204,
+      "sha256": "ac4fe6e049ed60b870dabdf4165d5ca42566868d342fed524fe7051fc803981a"
+    },
+    {
+      "path": "camera_bridge/run.py",
+      "bytes": 10143,
+      "sha256": "d08cab443fb37b1db7143f8635041de2fe4eb84ea50cfb2829ba132b77673ffa"
+    },
+    {
+      "path": "camera_bridge/video.py",
+      "bytes": 17769,
+      "sha256": "a5cf9bbb79a64ee872e093b180b8f73bf97c3cf881d7cc9fd62420cc3ea3ae8f"
+    },
+    {
+      "path": "check_camera_1080.py",
+      "bytes": 10455,
+      "sha256": "34a1f17c84dbdc7070f1dc77d6955e68c979542acfa7b90870a687ba3b8b43c6"
+    },
+    {
+      "path": "docs/01-pham-vi-demo.md",
+      "bytes": 3986,
+      "sha256": "557d603483250d7e245907b2bf21878006217c8b881b12bcd7a250aac4f8e4e9"
+    },
+    {
+      "path": "docs/02-kiem-tra-ban-khung.md",
+      "bytes": 1297,
+      "sha256": "7c46be2c1f2d479a9524e80091344f876e76dcae328ef5ddea1a1719ec097025"
+    },
+    {
+      "path": "docs/03-sap-xep-du-an.md",
+      "bytes": 5724,
+      "sha256": "146385426063b144231ffec6942946e608018c76068d3e7df45370957d583644"
+    },
+    {
+      "path": "docs/04-don-file-khong-con-dung.md",
+      "bytes": 4560,
+      "sha256": "26714d0957aa000e6038a96dda4c8d7a2a243a21d073cafa331c5b535f281568"
+    },
+    {
+      "path": "docs/05-tai-khoan-va-kho-rieng.md",
+      "bytes": 10890,
+      "sha256": "cfcaa286d79ed85845519dd62ddc477071de1149037f3ea7717be79ef8d6b39b"
+    },
+    {
+      "path": "docs/07-sua-loi-sao-chep-sqlite-windows.md",
+      "bytes": 3540,
+      "sha256": "24044ed64d559d897735e6eb69618fec02709907f385f189d7369bd491930d20"
+    },
+    {
+      "path": "docs/frontend_design_20261027.md",
+      "bytes": 4069,
+      "sha256": "aec6af4c35465c54095d2a21dc1c54056744b575a04aa03ffc00068ec497b129"
+    },
+    {
+      "path": "docs/PROJECT_STRUCTURE.md",
+      "bytes": 3834,
+      "sha256": "d750e9266ae48d152524b1128bf9b8c8ade7fee87e567a8aa0fa8568b74ef45e"
+    },
+    {
+      "path": "duplicate_gpu_test/isolation.py",
+      "bytes": 28030,
+      "sha256": "5d590112e36f916c35965b4616f2260b8117026dc95036dc16017f566f799e4c"
+    },
+    {
+      "path": "duplicate_gpu_test/README_VI.md",
+      "bytes": 5973,
+      "sha256": "c44157eae9668bbe584a9155c56b33219acb04fdc1f413ff9e4aad7644ab94e3"
+    },
+    {
+      "path": "duplicate_gpu_test/run.py",
+      "bytes": 31445,
+      "sha256": "0ddb72caa4af34ec435be6b2fac35e2ffb70fe27da8f592abe79b00c3fd734e6"
+    },
+    {
+      "path": "duplicate_gpu_test/worker.py",
+      "bytes": 4698,
+      "sha256": "373753cf30ceb314e5c92699b5ab082bf56d3b62db89679e52d111af78d4ed9e"
+    },
+    {
+      "path": "find_missing_evidence.py",
+      "bytes": 5469,
+      "sha256": "445a3fb7992ba6c075f864b54a647347a93551358eaafae7a82945f4cfef6064"
+    },
+    {
+      "path": "frontend/index.html",
+      "bytes": 351,
+      "sha256": "b53d23c0754cd247d9f88162a7f5c6f0f5eef256ba148012ce202bf55f3cf876"
+    },
+    {
+      "path": "frontend/package-lock.json",
+      "bytes": 27165,
+      "sha256": "5f426f4c2a0f44f07507bb71165fc330f5317a57470cd61491adb389c07ec256"
+    },
+    {
+      "path": "frontend/package.json",
+      "bytes": 372,
+      "sha256": "0ebad087cb0b4d8b82536e3c9543b4cb741ebba8ec3180a2cf6d34c1fa077007"
+    },
+    {
+      "path": "frontend/src/AdminAccountsPanel.jsx",
+      "bytes": 12351,
+      "sha256": "bf5cc07568b0906720e012109539a9d424d8acd745201a9dc8e17e60675eddc3"
+    },
+    {
+      "path": "frontend/src/AdminDashboard.jsx",
+      "bytes": 2878,
+      "sha256": "2af22ec9895f1ec9cdb792d8ccc6a0fdd2e3b4d18dd9e47b71496e29ea97f1ba"
+    },
+    {
+      "path": "frontend/src/adminWarehouse.css",
+      "bytes": 1896,
+      "sha256": "3ecc69fe273e6069554f1068160fbf3b02754fc6bf2dd5aa7649e031b0fa697d"
+    },
+    {
+      "path": "frontend/src/AdminWarehousePanel.jsx",
+      "bytes": 12771,
+      "sha256": "a67669f82df253da47ed3f6b55d330696926d8b7d3ae8e75acaac385ace4bb87"
+    },
+    {
+      "path": "frontend/src/App.jsx",
+      "bytes": 91563,
+      "sha256": "3909504f93ee41dfd96377dd717caa847b623b66202b10fbc7e4e5855c7c30da"
+    },
+    {
+      "path": "frontend/src/auth.css",
+      "bytes": 6201,
+      "sha256": "c48b42b8ee9fce490d0e64455f7f0fbe70593b4164a36cb1e9041505e4b48dae"
+    },
+    {
+      "path": "frontend/src/authClient.js",
+      "bytes": 1629,
+      "sha256": "096e4b304ec6dd94426562f65a8dd2d98252c38d0eaf49cdea8438b16b50b24d"
+    },
+    {
+      "path": "frontend/src/AuthShell.jsx",
+      "bytes": 16918,
+      "sha256": "820248e69ac6884370c5da47dd9f526713654b4f3c46c7d1697c62d41ae42092"
+    },
+    {
+      "path": "frontend/src/CatalogPanel.jsx",
+      "bytes": 9199,
+      "sha256": "19237d586911b1170ec667431c47d2021a5e43cb4050829a4686d981ce1d8c92"
+    },
+    {
+      "path": "frontend/src/design.css",
+      "bytes": 27373,
+      "sha256": "7712b82da067143bd7dc586220f44f06e86a6004a3c1196669e72969241cfed7"
+    },
+    {
+      "path": "frontend/src/gatewayCamera.css",
+      "bytes": 1230,
+      "sha256": "8970e16603c2cd5ec8d750fef02cf0d74334fb6624bb5bc7caf5ab301af26ce3"
+    },
+    {
+      "path": "frontend/src/GatewayCameraPanel.jsx",
+      "bytes": 3402,
+      "sha256": "69b90af15c01b83458dcd63c426df42fcb0a2ced3508fdfc2503aaff47ab1fb3"
+    },
+    {
+      "path": "frontend/src/GatewayVideoPreview.jsx",
+      "bytes": 6026,
+      "sha256": "b50c90af2482973a9d14c84ef1aca7f855c6fd00f179e0c5371be80a323c07ab"
+    },
+    {
+      "path": "frontend/src/GuestSupportPanel.jsx",
+      "bytes": 6101,
+      "sha256": "90db4ca8decee314064e29a5b3b0afd495f9af74824e4ccd58df388c6130e844"
+    },
+    {
+      "path": "frontend/src/Icon.jsx",
+      "bytes": 1175,
+      "sha256": "06179b5f034b6dba4c25a4092d267112cf9da87b7a3b4e6d5555067e31e96255"
+    },
+    {
+      "path": "frontend/src/imageTaskClient.js",
+      "bytes": 2170,
+      "sha256": "bf75be6b01fdc876408d55bc0377987f51f03e7ef68d90a2e2b857b50f83dc3d"
+    },
+    {
+      "path": "frontend/src/ImageTaskPanel.jsx",
+      "bytes": 2256,
+      "sha256": "722d666d3f2c9c3d7bb5e9a6e9090f6b6c1f042dfb9a2b2713313b02c4062b55"
+    },
+    {
+      "path": "frontend/src/main.jsx",
+      "bytes": 259,
+      "sha256": "99121b374c3ddd1a0429f6292d050595a3e4e28649cce0e3bb9bffab1be71b31"
+    },
+    {
+      "path": "frontend/src/PasswordPanel.jsx",
+      "bytes": 2094,
+      "sha256": "6349ac23f9600bbc2cc0b0cfb2ea180024d7a0a7b816f6b75255daf6c325d0be"
+    },
+    {
+      "path": "frontend/src/portal.css",
+      "bytes": 31336,
+      "sha256": "37c9e82ebd1caa09951eee902ede58ca0f8fe8158856ff7ce588de1454c94f3e"
+    },
+    {
+      "path": "frontend/src/RecoveryEmailPanel.jsx",
+      "bytes": 1971,
+      "sha256": "e2f5672709f4be82efbe8761e637e612a65f88b8d52b516311176b3619b0fd15"
+    },
+    {
+      "path": "frontend/src/reportExport.css",
+      "bytes": 894,
+      "sha256": "bc308438c8910de93304d9ef1f20a7a1bd2ba697336f26adbe4d5b77edaa195c"
+    },
+    {
+      "path": "frontend/src/ReportExport.jsx",
+      "bytes": 3157,
+      "sha256": "be35bbf7e6d487abc5d49bba6a6db57271a162441971176a0ac1b6825ea519ab"
+    },
+    {
+      "path": "frontend/src/serverStorage.css",
+      "bytes": 1402,
+      "sha256": "3e2724f5428ad5f3b3bd8a77c6d7fe4f082cafcf393e942ac4612d19d1abb20e"
+    },
+    {
+      "path": "frontend/src/ServerStorage.jsx",
+      "bytes": 3427,
+      "sha256": "e0bfb0246b2780c46790c2439b3b666ffb46fabfc9f5034744ee66eeaf903c14"
+    },
+    {
+      "path": "frontend/src/storage.css",
+      "bytes": 1219,
+      "sha256": "6367a61c667334b8802f8191f36cc642ce01c1960c2aa28805faefcbebcf3bc4"
+    },
+    {
+      "path": "frontend/src/StoragePanel.jsx",
+      "bytes": 4353,
+      "sha256": "36ecaa5f05bbc90f99fa566d5523a010d5109a0a78158b2e6ddedc40688c3940"
+    },
+    {
+      "path": "frontend/src/styles.css",
+      "bytes": 3685,
+      "sha256": "338564da73a7c1b64338323d7d026fa5b60773b655014478f7fa798cd70d00ee"
+    },
+    {
+      "path": "frontend/src/supportClient.js",
+      "bytes": 1830,
+      "sha256": "826f22157ebecf809f8e77a58351ed9c147a0ae880717007d18d445454c59424"
+    },
+    {
+      "path": "frontend/src/SupportMessages.jsx",
+      "bytes": 903,
+      "sha256": "295a6e092e9e3640bb5ee780b433cd9ee2933704f27651c42cf21629f88a1107"
+    },
+    {
+      "path": "frontend/src/SupportPanel.jsx",
+      "bytes": 11665,
+      "sha256": "a434340608feefc53b227225191822a6ec2112aaab8c596d41cd1f26300d5db1"
+    },
+    {
+      "path": "frontend/src/TransientNotice.jsx",
+      "bytes": 699,
+      "sha256": "8cd4e0ede8abe8685fd7f460ce5c151e2bc02f3b922e986a5dbbbf1ff10d279d"
+    },
+    {
+      "path": "frontend/src/warehouse.css",
+      "bytes": 30678,
+      "sha256": "7561213a2ecc198137b3dec6bc4a76218e5a6ccc5a3f2e8c6dd79d971d89f9b0"
+    },
+    {
+      "path": "frontend/src/WarehouseDashboard.jsx",
+      "bytes": 5120,
+      "sha256": "e580b26140c24ea959948f8999cf1e8c123b39170b26647b90ba80f1ab31a5f0"
+    },
+    {
+      "path": "frontend/vite.config.js",
+      "bytes": 285,
+      "sha256": "8d6435128f8be90341961c6ca88491ea17c983dff23ff13fa2d2dade4580693d"
+    },
+    {
+      "path": "gpu_queue_test/isolation.py",
+      "bytes": 28030,
+      "sha256": "5d590112e36f916c35965b4616f2260b8117026dc95036dc16017f566f799e4c"
+    },
+    {
+      "path": "gpu_queue_test/README_VI.md",
+      "bytes": 6368,
+      "sha256": "b18471fedc1be564e336db716e5d5a75e9e1e48aa8b79262aab9eaaec4204034"
+    },
+    {
+      "path": "gpu_queue_test/run.py",
+      "bytes": 24311,
+      "sha256": "5372fd90bbd9fad83dc7b803b997cd9fb0b204524df53ff3fcc93290c79b185b"
+    },
+    {
+      "path": "gpu_queue_test/worker.py",
+      "bytes": 3971,
+      "sha256": "70082786e612b03e6df7c06e70fe7aee4c9244c47f3f95d1831f268a3d00cc6a"
+    },
+    {
+      "path": "internet_access/public_app.py",
+      "bytes": 957,
+      "sha256": "3b124b4c4cb6c8a8ffa41a862126f981af26daa4a2b7b2075dd2aa8f954334f4"
+    },
+    {
+      "path": "internet_access/public_boundary.py",
+      "bytes": 6084,
+      "sha256": "47a7fb1805683e048382ce8113b8291ac98dc0d2ba4c3c96c7641f8207010556"
+    },
+    {
+      "path": "internet_access/README_VI.md",
+      "bytes": 1947,
+      "sha256": "e190fb3b087d8757da8e6e34f3ac027e11ee61277894969a369952a67335e1e3"
+    },
+    {
+      "path": "internet_access/start.py",
+      "bytes": 9280,
+      "sha256": "56035ff9216b5555fe33f5e7f9eb8b3e2ccdc4eb1430d73200e61b24234e8e7b"
+    },
+    {
+      "path": "load_test_100/README_VI.md",
+      "bytes": 6680,
+      "sha256": "b56edebd7c863ecd536947061afd46f97d98c03a138c758f20a2b126d39a584a"
+    },
+    {
+      "path": "load_test_100/run.py",
+      "bytes": 28030,
+      "sha256": "5d590112e36f916c35965b4616f2260b8117026dc95036dc16017f566f799e4c"
+    },
+    {
+      "path": "prepare_github.py",
+      "bytes": 13411,
+      "sha256": "9d1f155a7aa7dae77569a02b80e05f2465a455c7070a4da9f7033a77b732b7eb"
+    },
+    {
+      "path": "README.md",
+      "bytes": 5467,
+      "sha256": "708070316f57ed45722932789d4dcfc0f524e0baa43cc5e8a16ec5d9e6a31562"
+    },
+    {
+      "path": "README_VI.txt",
+      "bytes": 2269,
+      "sha256": "d98aa1e484ef3a79f708bfe20ce7ecf7b50ff65355ee66432b12cfc28860b367"
+    },
+    {
+      "path": "start_project.bat",
+      "bytes": 1441,
+      "sha256": "d8ee6c630d451c3f78e76a45e799290e7c1c337df5f82a4140ba8493bb3ab75e"
+    },
+    {
+      "path": "tests/test_storage.py",
+      "bytes": 5327,
+      "sha256": "8b5cdb652132a6b6e4e41a1b2c4754116a73727761e33137d36aaff2c804e87a"
+    },
+    {
+      "path": "tools/backup_core.py",
+      "bytes": 25641,
+      "sha256": "8c99e2c12ca2e87af42d29b7ad326713f2644afaa4d17b3bcfb80dd80e7cb844"
+    },
+    {
+      "path": "tools/check_system_backup.py",
+      "bytes": 8782,
+      "sha256": "bb1838f045136cd55928487f1571f9257cb237ada1f07cdb70e20fa0f6492792"
+    },
+    {
+      "path": "tools/finalize_project_cleanup.py",
+      "bytes": 10778,
+      "sha256": "c7ecd8f1e64defd6294047ce220878e5cc6fef0ca0de87af2f614c5b3f4df467"
+    },
+    {
+      "path": "tools/fix_sqlite_import.py",
+      "bytes": 5287,
+      "sha256": "79164715c2dcd1bc0f48c6231d9541c3c26f73c790ec54ca0f1b527aab1d5b5f"
+    },
+    {
+      "path": "tools/frontend_design/install.py",
+      "bytes": 8038,
+      "sha256": "61e5b66eb7a2100301dfd6fae72a49cf7a077554d209464068a87c6f2cbc9153"
+    },
+    {
+      "path": "tools/full_backup_crypto.py",
+      "bytes": 2849,
+      "sha256": "b283c742a452e7e1d6f11c2018991a74183d86b50dfcd2d013509981e0080ed0"
+    },
+    {
+      "path": "tools/full_project_backup.py",
+      "bytes": 11280,
+      "sha256": "d575b9447a926602cd6f207ea831e4dd6663d42ac05205a686ae19a6c5e089b1"
+    },
+    {
+      "path": "tools/inspect_project_layout.py",
+      "bytes": 9916,
+      "sha256": "c1dfda492c964aefde17b2c2ad37b5555619b38149c0bf673e420fc3612d85aa"
+    },
+    {
+      "path": "tools/inspect_storage.py",
+      "bytes": 10065,
+      "sha256": "1b2359757777e91e2378ad00a093f85e0978ecab50f19931d1a4403d697de1af"
+    },
+    {
+      "path": "tools/organize_inventory_project.py",
+      "bytes": 12909,
+      "sha256": "24a2e562a80c9f9c2adcb936b1c8a52f3962e02d38303a391bae1219ccc8ea99"
+    },
+    {
+      "path": "tools/organize_project.py",
+      "bytes": 13292,
+      "sha256": "89e2409208c8af4ca6242fe0f0e113a0ab29c7ec896d1df230e92eb94d6d226e"
+    },
+    {
+      "path": "tools/recover_full_project.py",
+      "bytes": 5238,
+      "sha256": "95a6bb64c9bda2247a1c2d6a7e6acf3aa9c93d3b26b6cfb6b6f9fd2e7410c33f"
+    },
+    {
+      "path": "tools/setup_accounts.py",
+      "bytes": 8387,
+      "sha256": "70bf6e35da59eb62b73a3eeeff57f08a077408acc4a0ebd66dd936af3ec3cada"
+    },
+    {
+      "path": "tools/system_backup.py",
+      "bytes": 10329,
+      "sha256": "4b8f0a1aaec399035685345f455b36848fcccbac81b380ae2c1506d8de5274de"
+    }
+  ]
+}
