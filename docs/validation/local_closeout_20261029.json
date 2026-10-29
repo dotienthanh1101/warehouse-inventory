@@ -4,7 +4,7 @@
   "unit_and_asgi_tests": 36,
   "unit_scope": "SQLite services and actual ASGI middleware/routes; authentication and AI are explicit fixtures, no native PostgreSQL used",
   "previous_integrity_tests": 26,
-  "react_checks": 13,
+  "react_checks": 14,
   "installer_checks": 8,
   "frontend_build": "passed",
   "secret_pattern_issues": [],

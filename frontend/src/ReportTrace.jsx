@@ -6,7 +6,7 @@ const time = value => value ? new Date(value).toLocaleString('vi-VN', {timeZone:
 const person = value => value ? (value.display_name || value.username || value.user_id) : 'Bản cũ chưa lưu người duyệt';
 
 export default function ReportTrace({dayId, markerId, active, onClose}) {
-  const [data,setData]=useState(null),[session,setSession]=useState(''),[offset,setOffset]=useState(0);
+  const [data,setData]=useState(null),[session,setSession]=useState(''),[offset,setOffset]=useState(0),[sessionOptions,setSessionOptions]=useState([]);
   const [busy,setBusy]=useState(false),[error,setError]=useState(''),[attempt,setAttempt]=useState(0);
   const request=useRef(null);
   useEffect(()=>{
@@ -21,7 +21,7 @@ export default function ReportTrace({dayId, markerId, active, onClose}) {
         const response=await apiFetch(`/api/inventory/days/${dayId}/trace?${q}`,{cache:'no-store',signal:controller.signal});
         const value=await response.json();
         if(!response.ok)throw new Error(typeof value.detail==='string'?value.detail:'Chưa đọc được nguồn số liệu.');
-        if(request.current===controller && !controller.signal.aborted)setData(value);
+        if(request.current===controller && !controller.signal.aborted){setData(value);setSessionOptions(value.sessions);}
       }catch(e){
         if(request.current===controller)setError(e.name==='AbortError'?'Đọc nguồn quá thời gian. Bấm thử lại.':e.message);
       }finally{
@@ -36,14 +36,14 @@ export default function ReportTrace({dayId, markerId, active, onClose}) {
       <button type="button" className="quiet" onClick={onClose}>Đóng</button></div>
     {busy&&<p role="status">Đang đọc biên nhận…</p>}
     {error&&<p role="alert">{error} <button type="button" className="secondary" onClick={()=>{setAttempt(v=>v+1);}}>Thử lại</button></p>}
+    {sessionOptions.length>0&&<label>Phiên đã chốt
+      <select value={session||data?.selected_session_id||sessionOptions.at(-1).session_id} disabled={busy} onChange={e=>{setSession(e.target.value);setOffset(0);}}>
+        {sessionOptions.map(s=><option key={s.session_id} value={s.session_id}>#{s.session_order} · {s.name} · Tồn {s.quantity??'Chưa có bản lưu'} · Chênh lệch {s.difference>0?'+':''}{s.difference??'Chưa rõ'}</option>)}
+      </select>
+    </label>}
     {data&&<>
       <p><strong>{data.product_name}</strong> · {data.product_code}</p>
       <p className="report-trace-note">{data.note}</p>
-      <label>Phiên đã chốt
-        <select value={data.selected_session_id} disabled={busy} onChange={e=>{setSession(e.target.value);setOffset(0);}}>
-          {data.sessions.map(s=><option key={s.session_id} value={s.session_id}>#{s.session_order} · {s.name} · Tồn {s.quantity??'Chưa có bản lưu'} · Chênh lệch {s.difference>0?'+':''}{s.difference??'Chưa rõ'}</option>)}
-        </select>
-      </label>
       <p>{data.total} biên nhận có loại hàng này trong phiên đã chọn.</p>
       {!data.receipts.length&&<p>Không có kiện loại này được ghi trong phiên. Số 0 lấy từ bản tồn đã chốt sau xác nhận đủ phạm vi.</p>}
       {data.receipts.map(receipt=><article className="report-trace-receipt" key={receipt.review_id}>
