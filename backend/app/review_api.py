@@ -12,7 +12,8 @@ from uuid import uuid4
 from backend.app.duplicate_check import create_check, review_fingerprint, current_reference_heads
 from backend.app.database import get_connection
 
-from fastapi import HTTPException, Response
+from fastapi import HTTPException, Request, Response
+from backend.app.inventory_provenance import actor_snapshot
 from pydantic import BaseModel, ConfigDict, Field
 
 from backend.app.main import (
@@ -361,6 +362,7 @@ def save_correction(
     review_id: str,
     correction: CorrectionRequest,
     response: Response,
+    http_request: Request,
 ):
     with review_lock:
         document = read_review(review_id)
@@ -385,6 +387,7 @@ def save_correction(
         next_revision = document["revision"] + 1
 
         human_review = {
+            "reviewed_by": actor_snapshot(http_request.state.identity),
             "saved_at": now,
             "revision": next_revision,
             "boxes": [
@@ -459,6 +462,7 @@ def confirm_review(
     review_id: str,
     request: ConfirmRequest,
     response: Response,
+    http_request: Request,
 ):
     if not request.confirm_new_boxes:
         raise HTTPException(
@@ -476,6 +480,7 @@ def confirm_review(
                 request.revision,
                 request.check_id,
                 [d.model_dump(mode='json') for d in request.decisions],
+                confirmed_by=actor_snapshot(http_request.state.identity),
             )
         except ValueError as error:
             raise HTTPException(409, str(error))

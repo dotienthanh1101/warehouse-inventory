@@ -1,0 +1,20 @@
+{
+  "baseline_commit": "70ba805381bb50ac54b1d7451d0a56dca828a50f",
+  "modified_or_added_files": 24,
+  "unit_and_asgi_tests": 36,
+  "unit_scope": "SQLite services and actual ASGI middleware/routes; authentication and AI are explicit fixtures, no native PostgreSQL used",
+  "previous_integrity_tests": 26,
+  "react_checks": 13,
+  "installer_checks": 8,
+  "frontend_build": "passed",
+  "secret_pattern_issues": [],
+  "models_thresholds_and_database_schema_unchanged": true,
+  "limitations": [
+    "Windows installation and physical camera not run here",
+    "No independent CV dataset, GPU accuracy or mixed 100-user camera workload tested",
+    "No production backup or historical evidence repair; no automatic evidence deletion",
+    "HTTPS remains paused"
+  ],
+  "installer_scope": "21 explicitly listed source/test/document files; current DB/config and model files are not read or overwritten by installer.",
+  "validated_source_change_files": 23
+}
