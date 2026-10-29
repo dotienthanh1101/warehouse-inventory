@@ -132,3 +132,16 @@ khi chạy. Nguồn thử và ảnh benchmark lịch sử không nằm trong b�
 
 [Xem phạm vi đóng gói và nguồn gốc](docs/SOURCE_EXPORT.md). README giai đoạn đầu
 được giữ tại [docs/history/README-step-1.md](docs/history/README-step-1.md).
+
+## Bản hoàn thiện local 29/10/2026
+
+Bổ sung nút **Xem nguồn** ở từng dòng báo cáo: chọn phiên, xem biên nhận/ảnh/revision,
+người xác nhận mới, lịch sử hiệu chỉnh và liên kết kiện trùng. Dữ liệu lịch sử thiếu
+người duyệt hoặc ảnh được ghi rõ. Sửa URL camera có cổng 0 bị hiểu là mặc định.
+
+- [Áp dụng vào bản local đang dùng](docs/UPDATE_LOCAL.md)
+- [Sáu sơ đồ thiết kế](docs/design/LOCAL_DESIGN.md)
+- [Kịch bản demo và kiểm tra](docs/DEMO_LOCAL.md)
+- [Phần đã xử lý và giới hạn còn lại](docs/LOCAL_STATUS_20261029.md)
+
+Không tiếp tục sửa HTTPS hoặc đổi mô hình/ngưỡng so sánh trong bản này.

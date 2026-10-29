@@ -201,7 +201,7 @@ def get_review_receipt(review_id):
         return _receipt_result(connection, receipt, True)
 
 
-def record_review(session_id, document, expected_revision, check_id=None, decisions=None):
+def record_review(session_id, document, expected_revision, check_id=None, decisions=None, *, confirmed_by=None):
     """Ghi thùng mới, giữ liên kết thùng trùng; all or nothing."""
     document = json.loads(
         json.dumps(document, allow_nan=False)
@@ -359,6 +359,10 @@ def record_review(session_id, document, expected_revision, check_id=None, decisi
             'new_box_count': len(new_boxes),
             'duplicate_box_count': len(duplicate_boxes),
             'method': 'human_reviewed_visual_comparison',
+        }
+        document['confirmation'] = {
+            'confirmed_at': recorded_at,
+            'confirmed_by': confirmed_by,
         }
         snapshot = json.dumps(
             document,

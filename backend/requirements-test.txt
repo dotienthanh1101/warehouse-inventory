@@ -1,0 +1,2 @@
+# Optional HTTP test client; keep the installed OpenCV/PyTorch environment unchanged.
+httpx==0.28.1

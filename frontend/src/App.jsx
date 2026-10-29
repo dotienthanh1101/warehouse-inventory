@@ -5,6 +5,7 @@ import CatalogPanel from './CatalogPanel';
 import ImageTaskPanel from './ImageTaskPanel';
 import WarehouseDashboard from './WarehouseDashboard';
 import ReportExport from './ReportExport';
+import ReportTrace from './ReportTrace';
 import Icon from './Icon';
 import TransientNotice from './TransientNotice';
 import GatewayCameraPanel from './GatewayCameraPanel';
@@ -157,16 +158,17 @@ function statusText(box) {
   return box.note === AUTO_NOTE ? 'AI tự chấp nhận' : 'Đã kiểm tra thủ công';
 }
 
-function StockTable({ items, daily = false }) {
+function StockTable({ items, daily = false, onTrace }) {
   const cell = { padding: 10, borderBottom: '1px solid #dbe2ea', textAlign: 'left' };
   return <div style={{ overflowX: 'auto' }}><table style={{ width: '100%', borderCollapse: 'collapse' }}>
-    <thead><tr>{['Loại hàng', daily ? 'Tồn đầu ngày' : 'Mốc trước', daily ? 'Tồn cuối' : 'Đã ghi nhận', 'Tăng', 'Giảm'].map((t) => <th key={t} style={cell}>{t}</th>)}</tr></thead>
+    <thead><tr>{['Loại hàng', daily ? 'Tồn đầu ngày' : 'Mốc trước', daily ? 'Tồn cuối' : 'Đã ghi nhận', 'Tăng', 'Giảm'].map((t) => <th key={t} style={cell}>{t}</th>)}{onTrace && <th style={cell}>Nguồn số liệu</th>}</tr></thead>
     <tbody>{items.map((item) => <tr key={item.marker_id}>
       <td style={cell}>{item.product_name} · ID {item.marker_id}</td>
       <td style={cell}>{daily ? item.opening_quantity : item.reference_quantity}</td>
       <td style={cell}>{daily ? item.closing_quantity : item.recorded_quantity}</td>
       <td style={cell}>{(daily ? item.total_increase : item.increase) ?? 'Chưa chốt'}</td>
       <td style={cell}>{(daily ? item.total_decrease : item.decrease) ?? 'Chưa chốt'}</td>
+      {onTrace && <td style={cell}><button type="button" className="secondary" onClick={() => onTrace(item.marker_id)}>Xem nguồn</button></td>}
     </tr>)}</tbody>
   </table></div>;
 }
@@ -1175,6 +1177,8 @@ export default function App({ storageNamespace, activeSection, onSectionChange, 
     .filter(({ box }) => !onlyPending || !box.reviewed)
     .sort((a, b) => Number(a.box.reviewed) - Number(b.box.reviewed));
 
+  const [traceMarker, setTraceMarker] = useState(null);
+
   return (
     <main className="warehouse-app" data-active-tab={activeTab}>
       <div className="current-context" hidden={activeTab === 'review'}>
@@ -1617,10 +1621,11 @@ export default function App({ storageNamespace, activeSection, onSectionChange, 
         {sessions.some((s) => !s.finalized_at) && <p>Cần kết thúc phiên đang mở trước khi tổng hợp ngày.</p>}
         {dayReport && <>
           <h3>Ngày {dayReport.business_date} · {dayReport.status === 'closed' ? 'Báo cáo đã chốt' : 'Bản xem trước'}</h3>
-          <StockTable items={dayReport.items} daily />
+          <StockTable items={dayReport.items} daily onTrace={setTraceMarker} />
           <p><strong>Tồn đầu: {dayReport.opening_total_boxes} · Tăng: {dayReport.total_increase} · Giảm: {dayReport.total_decrease} · Tồn cuối: {dayReport.closing_total_boxes}</strong></p>
           <p>{dayReport.session_count} phiên. {dayReport.closed_at && `Chốt lúc ${new Date(dayReport.closed_at).toLocaleString('vi-VN', { timeZone: 'Asia/Ho_Chi_Minh' })}.`}</p>
           <ReportExport report={dayReport} dayId={dayId} warehouseId={storageNamespace} active={activeTab==='report'} />
+          <ReportTrace key={`${dayId}:${storageNamespace}:${traceMarker}`} dayId={dayReport.day_id} markerId={traceMarker} active={activeTab==='report'} onClose={() => setTraceMarker(null)} />
           {dayWritable && dayReport.status === 'open' && <>
             <label style={{ display: 'block', margin: '16px 0' }}>
               <input type="checkbox" checked={dayCloseAccepted} disabled={busy}

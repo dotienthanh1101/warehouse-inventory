@@ -18,7 +18,7 @@ def validate_camera_address(public_url, settings):
     try:
         parts = urlsplit(public_url)
         ip = ipaddress.IPv4Address(parts.hostname)
-        port = parts.port or (443 if parts.scheme == 'https' else 80)
+        port = parts.port if parts.port is not None else (443 if parts.scheme == 'https' else 80)
         if parts.scheme not in ('http', 'https') or parts.username is not None or parts.query or parts.fragment:
             raise ValueError()
         if not any(ip in network for network in PRIVATE_NETWORKS):
