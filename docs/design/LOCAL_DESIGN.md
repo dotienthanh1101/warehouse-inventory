@@ -95,7 +95,7 @@ erDiagram
   AUTH_USER ||--o| WAREHOUSE : "sở hữu khi role user"
   AUTH_USER ||--o{ AUTH_SESSION : "đăng nhập"
   WAREHOUSE ||--o{ INVENTORY_DAY : "phạm vi dữ liệu"
-  INVENTORY_DAY ||--|{ DAY_SESSION : "chứa"
+  INVENTORY_DAY ||--o{ DAY_SESSION : "chứa"
   DAY_SESSION ||--|| INVENTORY_SESSION : "liên kết"
   INVENTORY_SESSION ||--o{ REVIEW_RECEIPT : "ghi nhận"
   REVIEW_RECEIPT ||--o{ BOX_INSTANCE : "kiện mới"
@@ -106,6 +106,7 @@ erDiagram
   INVENTORY_DAY ||--o{ DAY_CLOSING_ITEM : "báo cáo chốt"
 ```
 
+Sơ đồ tập trung vào luồng kiểm kê theo ngày; phiên legacy có thể chưa liên kết ngày.
 Auth user/session/warehouse nằm ở PostgreSQL. Nghiệp vụ nằm trong SQLite từng kho.
 Quan hệ warehouse đến ngày là quan hệ logic qua phạm vi thư mục, không phải khóa
 ngoại xuyên PostgreSQL–SQLite. Ảnh là file riêng. reviewed_payload_json của biên
